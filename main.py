@@ -24,16 +24,25 @@ class QWschool:
         # 'Referer': '',
         'Accept-Encoding': 'gzip, deflate',
         'Accept-Language': 'zh-CN',
-        'Cookie': ''
+        # 'Cookie': ''
     }
 
     def __init__(self):
         self.session = requests.Session()
-
+        cookies = self.cookies
+        if not cookies:
+            logging.error('__init__()\tNone Cookie')
+            return
+        self.headers['Cookie'] = cookies
         self.session.headers.update(self.headers)
         self.session.mount('http://', HTTPAdapter(max_retries=3))
         self.session.mount('https://', HTTPAdapter(max_retries=3))
-        self.get_home()
+        # self.get_home()
+
+    @property
+    def cookies(self):
+        with open('Cookie') as f:
+            return f.read().strip()
 
     def get_home(self):
         url1 = 'https://qy.51vj.cn/app/home/school?corpid=wxd29090e3a46349dd&appid=1003'

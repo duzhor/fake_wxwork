@@ -34,7 +34,6 @@ class QWschool:
         self.session.mount('http://', HTTPAdapter(max_retries=3))
         self.session.mount('https://', HTTPAdapter(max_retries=3))
         self.get_home()
-        # a = base64.b64encode('qinjj@broadtech.com.cn@86:1591250900883:e30777d2203df242260bf2da19d0521f'.encode())
 
     def get_home(self):
         url1 = 'https://qy.51vj.cn/app/home/school?corpid=wxd29090e3a46349dd&appid=1003'

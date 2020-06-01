@@ -24,7 +24,7 @@ class QWschool:
         # 'Referer': '',
         'Accept-Encoding': 'gzip, deflate',
         'Accept-Language': 'zh-CN',
-        'Cookie': '_cookie_qinjj%40broadtech.com.cn-deviceId=f05478fc-2fe8-419e-a29d-6df9300698a1; rememberme-wxd29090e3a46349dd=cWluampAYnJvYWR0ZWNoLmNvbS5jbkA4NjoxNTkxMjUwOTAwODgzOmUzMDc3N2QyMjAzZGYyNDIyNjBiZjJkYTE5ZDA1MjFm; JSESSIONID=wxd29090e3a46349dd_3f25e6fe-d719-4fa7-869b-d05f72b19871'
+        'Cookie': ''
     }
 
     def __init__(self):
